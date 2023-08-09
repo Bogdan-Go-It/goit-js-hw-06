@@ -28,12 +28,9 @@ const list = document.querySelector(".gallery");
 // console.log(imegItem);
 
 const newImeg = images
-  .map(
-    (im) => `<li><img src = "${im.url}" alt = "${im.alt}" width = "200px"></li>`
-  )
+  .map((im) => `<li><img src="${im.url}" alt="${im.alt}" width="200px"></li>`)
   .join("");
 list.insertAdjacentHTML("beforeend", newImeg);
 list.style.display = "flex";
 list.style.flexDirection = "row";
 list.style.gap = "20px";
-console.log(newImeg);

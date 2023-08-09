@@ -1,10 +1,7 @@
-const inpu = document.querySelector("input#name-input");
-const spaan = document.querySelector("span#name-output");
+const input = document.querySelector("input#name-input");
+const span = document.querySelector("span#name-output");
 
-inpu.addEventListener("input", (event) => {
-  spaan.textContent = event.currentTarget.value;
-  if (inpu.value === "") {
-    spaan.textContent = "Anonymous";
-  }
-  console.log(inpu.value);
+input.addEventListener("input", (event) => {
+  span.textContent = event.target.value || "Anonymous";
+  // Цей варіант мені більш подобаеться. Дякую!!!!!!
 });
